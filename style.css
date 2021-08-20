@@ -10,6 +10,7 @@
 :root{
     --dark-blue: #002C3E;/* Declarando Variáveis no CSS*/
     --light-blue:#788cc4;
+    --blueHover:#30728b;
     --font-primary: "Baloo da 2", serif;
 
 }
@@ -53,15 +54,57 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: aliceblue;
     padding: .2rem;
     
 }
 #form input{
     border: none;
     border-bottom: solid 1px var(--dark-blue);
-    margin:5px;
+    margin:20px;
     width: 16rem;
+    height: 2.5rem;
     background-color:var(--light-blue);
     color: var(--dark-blue);
+    font-size: 12px;
+    outline: none;
+    transition: .5s;
+    
+
+}
+
+input::placeholder{
+    color: var(--dark-blue);
+
+}
+#btn{
+    width: 15%;
+    background: var(--dark-blue);
+    color: #fff;
+    cursor: pointer;
+    border:none;
+    border-radius: .2rem;
+    text-transform: uppercase;
+    height: 1.4rem;
+    margin-bottom: 5rem;
+    
+}
+#btn:hover{
+    background: var(--blueHover);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 9px 5px rgba(0,0,0,0);
+    
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-blue);
+    
+}
+@media(max-width:800px){/*A partir de 800px ele usará esta estilização*/
+    html{
+        font-size: 57.5%;
+    }
+    #container{
+        width:10%;
+    }
 }
